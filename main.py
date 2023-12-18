@@ -25,7 +25,7 @@ for container in containers:
 containers_by_emkost = sorted(containers, key=lambda container: container.emkost)
 
 # сортировка по коэффициенту
-containers_by_keofC = sorted(containers, key=lambda container: container.koeffC)
+containers_by_keofC = sorted(containers, key=lambda container: container.koeffC, reverse=True)
 
 # сортировка по материалу
 containers_by_material = sorted(containers, key=lambda container: container.material)
@@ -33,10 +33,11 @@ containers_by_material = sorted(containers, key=lambda container: container.mate
 # сортировка по площади поверхности
 containers_by_ff = sorted(containers, key=lambda container: container.F)
 
-print(list(map(str, containers_by_emkost)))
-print(list(map(str, containers_by_material)))
-print(list(map(str, containers_by_keofC)))
-print(list(map(str, containers_by_ff)))
+print('\nСписок сортированных резервуаров:')
+print('По ёмкостям:\n', list(map(str, containers_by_emkost)))
+print('По материалам:\n', list(map(str, containers_by_material)))
+print('По коэффициенту C:\n', list(map(str, containers_by_keofC)))
+print('По площади поверхности:\n', list(map(str, containers_by_ff)))
 
 # 6 задание
 
